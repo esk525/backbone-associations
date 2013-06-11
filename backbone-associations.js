@@ -323,6 +323,8 @@
 													if (attr) {
 															aJson = attr.toJSON(options);
 															json[relation.key] = _.isArray(aJson) ? _.compact(aJson) : aJson;
+													} else {
+															json[relation.key] = []; //add empty if none set
 													}
 											}, this);
 									}
